@@ -150,7 +150,7 @@ export interface LoginWithChallengeOptions extends AuthBaseOptions {
   signMethod?: 'personal_sign' | 'eth_sign';
 }
 
-export type IdentityPresentationScope = 'identity.basic' | 'identity.wallet' | 'identity.username' | 'identity.email';
+export type IdentityPresentationScope = 'identity.basic' | 'identity.wallet' | 'identity.username' | 'identity.email' | 'identity.avatar';
 
 export type IdentityPresentationRequest = {
   appId?: string;
@@ -159,6 +159,7 @@ export type IdentityPresentationRequest = {
   scopes: IdentityPresentationScope[];
   account?: { chainKey: string; address: string };
   issuer?: string;
+  issuerEndpoint?: string;
   expiresAt?: string;
   statement?: string;
   requestId?: string;
